@@ -1,0 +1,164 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+/* font-family: 'Bilbo Swash Caps', cursive; */
+
+/* ========================================================
+  Selectores etiquetas
+  =========================================================  */
+
+html{
+  font-size: $fontHt;
+}
+
+*{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  font-family: 'Bilbo Swash Caps', cursive;
+  color: $choco;
+  text-transform: capitalize;
+  
+  img{
+    width: 150px;
+    height: 150px;
+    
+  }
+
+  @for $h from 1 through 2{
+    h#{$h}{
+      font-size: $fontH1H2b;
+      text-align: center;
+    }
+  }
+
+  .logo{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+  }
+
+  div a{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+nav{
+  background: $choco;
+
+  ul li a{
+    font-size: $font2a;
+  }
+}
+
+section h3{
+  color: $orange;
+  font-size: $fontH3;
+  text-align: center;
+}
+
+section p{
+  font-size: $font2b;
+}
+
+footer{
+  background: $choco;
+  text-align: center;
+  color: $snow;
+
+  h3{
+    font-size: $font2a;
+  }
+
+  a{
+    color: $snow;
+  }
+
+  .info div{
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* compilado con un map y un each */
+$sizes:(
+  footer a i : $fontRed,
+  footer p : $font1,  
+  ".fontSize": $font2b,
+  ".fontSize2": $font1
+  );
+
+@each $key, $value in $sizes {
+  #{$key}{
+    font-size: $value;
+  }
+}
+
+
+/* ========================================================
+  Selectores de clases
+  =========================================================  */
+
+.anima:hover{
+  animation-name: transform;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.snow{
+  color: $snow
+}
+
+.navColor{
+  background: $choco;
+}
+
+.m-img{
+  margin-bottom: 1rem;
+}
+
+.btn-outline-primary{
+  color: $choco;
+  border-color:$choco ;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: $choco;
+  border-color: $choco;
+}
+
+@media only screen and (min-width: 576px){
+  .m-img{
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Selector etiqueta */
+
+  iframe{
+    display: none;
+  }
+
+  /* Selcetor id */
+  #img{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  
+
+  header h1,h2{
+    font-size: $fontH1H2;
+  }
+}
+@keyframes transform{
+  0%{transform: scale(1,1);}
+  50%{transform: scale(1.2,1.2);}
+  100%{transform: scale(1,1);}
+}

@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+/* font-family: 'Bilbo Swash Caps', cursive; */
+/* ========================================================
+  Selectores etiquetas
+  =========================================================  */
+html {
+  font-size: 62.5%; }
+
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+header {
+  font-family: 'Bilbo Swash Caps', cursive;
+  color: #784738;
+  text-transform: capitalize; }
+  header img {
+    width: 150px;
+    height: 150px; }
+  header h1 {
+    font-size: 6rem;
+    text-align: center; }
+  header h2 {
+    font-size: 6rem;
+    text-align: center; }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  header div a {
+    display: flex;
+    justify-content: center; }
+
+nav {
+  background: #784738; }
+  nav ul li a {
+    font-size: 2.5rem; }
+
+section h3 {
+  color: darkorange;
+  font-size: 4rem;
+  text-align: center; }
+
+section p {
+  font-size: 2rem; }
+
+footer {
+  background: #784738;
+  text-align: center;
+  color: snow; }
+  footer h3 {
+    font-size: 2.5rem; }
+  footer a {
+    color: snow; }
+  footer .info div {
+    margin-bottom: 0.25rem; }
+
+/* compilado con un map y un each */
+footer a i {
+  font-size: 3.2rem; }
+
+footer p {
+  font-size: 1.5rem; }
+
+.fontSize {
+  font-size: 2rem; }
+
+.fontSize2 {
+  font-size: 1.5rem; }
+
+/* ========================================================
+  Selectores de clases
+  =========================================================  */
+.anima:hover {
+  animation-name: transform;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+.snow {
+  color: snow; }
+
+.navColor {
+  background: #784738; }
+
+.m-img {
+  margin-bottom: 1rem; }
+
+.btn-outline-primary {
+  color: #784738;
+  border-color: #784738; }
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #784738;
+  border-color: #784738; }
+
+@media only screen and (min-width: 576px) {
+  .m-img {
+    margin-bottom: 0; } }
+
+@media only screen and (max-width: 767px) {
+  /* Selector etiqueta */
+  iframe {
+    display: none; }
+  /* Selcetor id */
+  #img {
+    width: 100%; } }
+
+@media only screen and (min-width: 767px) {
+  header h1, h2 {
+    font-size: 8rem; } }
+
+@keyframes transform {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.2, 1.2); }
+  100% {
+    transform: scale(1, 1); } }
