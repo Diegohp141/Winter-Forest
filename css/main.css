@@ -96,6 +96,18 @@ footer p {
   background-color: #784738;
   border-color: #784738; }
 
+.fa-facebook:hover {
+  color: #1977f3; }
+
+.fa-instagram:hover {
+  color: #cc48e7; }
+
+.fa-twitter:hover {
+  color: #55adee; }
+
+.fa-envelope:hover {
+  color: #d64a3a; }
+
 @media only screen and (min-width: 576px) {
   .m-img {
     margin-bottom: 0; } }
